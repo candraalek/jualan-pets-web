@@ -1,7 +1,7 @@
 const pets = [
-  { name: "Spider", price: "150.000", image: "images/spider.png" },
-  { name: "Bunny", price: "120.000", image: "images/bunny.png" },
-  { name: "Fox", price: "180.000", image: "images/fox.png" },
+  { name: "Titan Spider 86kg+", price: "150.000", image: "images/spider.png" },
+  { name: "Semi Godly Spider 98kg+", price: "180.000", image: "images/spider.png" },
+  { name: "Godly Spider 107kg+", price: "2000.000", image: "images/spider.png" },
 ];
 
 const container = document.getElementById("pet-list");
@@ -16,3 +16,4 @@ pets.forEach(pet => {
   `;
   container.appendChild(card);
 });
+
