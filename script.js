@@ -15,7 +15,7 @@ const pets = [
   { name: "RB Queen Bee base 2kg+", price: "15.000", image: "images/queen_bee.png" },
   { name: "M Queen Bee base 2kg+", price: "13.000", image: "images/queen_bee.png" },
   { name: "Queen Bee base 2kg+", price: "10.000", image: "images/queen_bee.png" },
-  { name: "M Butterfly ?kg+", price: "18.000", image: "images/butterfly.png" },
+  { name: "M Butterfly ?kg+", price: "35.000", image: "images/butterfly.png" },
   { name: "DragonFly 1kg+", price: "8.000", image: "images/dragonfly.png" },
   { name: "DragonFly 2kg+", price: "10.000", image: "images/dragonfly.png" },
 ];
@@ -32,6 +32,7 @@ pets.forEach(pet => {
   `;
   container.appendChild(card);
 });
+
 
 
 
