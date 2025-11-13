@@ -10,6 +10,8 @@ const pets = [
   { name: "Mimic Octopus base 1kg", price: "8.000", image: "images/mimicoctopus.png" },
   { name: "Mimic Octopus base 2kg", price: "12.000", image: "images/mimicoctopus.png" },
   { name: "Mimic Octopus base 2.5kg", price: "20.000", image: "images/mimicoctopus.png" },
+  { name: "Headless Horseman base 1kg+", price: "10.000", image: "images/headless_horseman.png" },
+  { name: "Headless Horseman base 2kg+", price: "15.000", image: "images/headless_horseman.png" },
 ];
 
 const container = document.getElementById("pet-list");
@@ -24,6 +26,7 @@ pets.forEach(pet => {
   `;
   container.appendChild(card);
 });
+
 
 
 
