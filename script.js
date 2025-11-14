@@ -1,8 +1,8 @@
 const pets = [
-  { name: "NM Semi Huge Spider 47.02kg", price: "50.000", image: "images/spider.png" },
-  { name: "NM Titan Spider 86.63kg", price: "150.000", image: "images/spider.png" },
-  { name: "NM Semi Godly Spider 98.50kg", price: "180.000", image: "images/spider.png" },
-  { name: "NM Godly Spider 107.63kg", price: "200.000", image: "images/spider.png" },
+  { name: "NM Huge Spider 47.02kg", price: "50.000", image: "images/spider.png" },
+  { name: "NM Spider 86.63kg", price: "125.000", image: "images/spider.png" },
+  { name: "NM Spider 98.50kg", price: "150.000", image: "images/spider.png" },
+  { name: "NM Spider 107.63kg", price: "180.000", image: "images/spider.png" },
   { name: "NM Echo Frog 39.26kg", price: "80.000", image: "images/echo_frog.png" },
   { name: "NM Mimic Octopus 39,18kg", price: "80.000", image: "images/mimicoctopus.png" },
   { name: "NM Mimic Octopus 26.68kg", price: "40.000", image: "images/mimicoctopus.png" },
@@ -45,3 +45,4 @@ pets.forEach(pet => {
 
   container.appendChild(card);
 });
+
