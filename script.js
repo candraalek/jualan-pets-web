@@ -1,52 +1,35 @@
-// Ganti username IG kamu di sini
-const instagramDM = "https://ig.me/m/your_instagram_username";
-
-// Data pets — kamu bisa tambah / edit sesuai kebutuhan
 const pets = [
-  {
-    name: "Spider",
-    price: "25.000",
-    image: "images/spider.jpg"
-  },
-  {
-    name: "Elephant",
-    price: "60.000",
-    image: "images/elephant.jpg"
-  },
-  {
-    name: "Ostrich",
-    price: "40.000",
-    image: "images/ostrich.jpg"
-  }
-  // Tambahkan lagi sesuai jualan kamu
+  { name: "NM Semi Huge Spider 47.02kg", price: "50.000", image: "images/spider.png" },
+  { name: "NM Titan Spider 86.63kg", price: "150.000", image: "images/spider.png" },
+  { name: "NM Semi Godly Spider 98.50kg", price: "180.000", image: "images/spider.png" },
+  { name: "NM Godly Spider 107.63kg", price: "200.000", image: "images/spider.png" },
+  { name: "NM Echo Frog 39.26kg", price: "80.000", image: "images/echo_frog.png" },
+  { name: "NM Mimic Octopus 39,18kg", price: "80.000", image: "images/mimicoctopus.png" },
+  { name: "NM Mimic Octopus 26.68kg", price: "40.000", image: "images/mimicoctopus.png" },
+  { name: "NM Mimic Octopus 26.33kg", price: "40.000", image: "images/mimicoctopus.png" },
+  { name: "Mimic Octopus base 1kg", price: "8.000", image: "images/mimicoctopus.png" },
+  { name: "Mimic Octopus base 2kg", price: "12.000", image: "images/mimicoctopus.png" },
+  { name: "Mimic Octopus base 2.5kg", price: "20.000", image: "images/mimicoctopus.png" },
+  { name: "Headless Horseman base 1kg+", price: "10.000", image: "images/headless_horseman.png" },
+  { name: "Headless Horseman base 2kg+", price: "15.000", image: "images/headless_horseman.png" },
+  { name: "RB Queen Bee base 2kg+", price: "15.000", image: "images/queen_bee.png" },
+  { name: "M Queen Bee base 2kg+", price: "13.000", image: "images/queen_bee.png" },
+  { name: "Queen Bee base 2.09kg", price: "10.000", image: "images/queen_bee.png" },
+  { name: "M Butterfly ?kg+", price: "35.000", image: "images/butterfly.png" },
+  { name: "DragonFly 1kg+", price: "8.000", image: "images/dragonfly.png" },
+  { name: "DragonFly 2kg+", price: "10.000", image: "images/dragonfly.png" },
+  { name: "Elephant 1kg+", price: "12.000", image: "images/elephant.png" },
 ];
 
-const list = document.getElementById("pet-list");
+const container = document.getElementById("pet-list");
 
-pets.forEach((pet) => {
+pets.forEach(pet => {
   const card = document.createElement("div");
   card.className = "pet-card";
-
-  const img = document.createElement("img");
-  img.src = pet.image;
-  img.alt = pet.name;
-  img.className = "pet-img";
-
-  // Klik gambar → otomatis buka DM IG
-  img.style.cursor = "pointer";
-  img.onclick = () => {
-    window.location.href = instagramDM;
-  };
-
-  const name = document.createElement("h3");
-  name.textContent = pet.name;
-
-  const price = document.createElement("p");
-  price.className = "price";
-  price.textContent = "Harga: Rp " + pet.price;
-
-  card.appendChild(img);
-  card.appendChild(name);
-  card.appendChild(price);
-  list.appendChild(card);
+  card.innerHTML = `
+    <img src="${pet.image}" alt="${pet.name}">
+    <h3>${pet.name}</h3>
+    <p class="price">Rp ${pet.price}</p>
+  `;
+  container.appendChild(card);
 });
