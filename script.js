@@ -23,13 +23,25 @@ const pets = [
 
 const container = document.getElementById("pet-list");
 
+// Ganti ke username Instagram kamu
+const instagramDM = "https://ig.me/m/hansoo.4";
+
 pets.forEach(pet => {
   const card = document.createElement("div");
   card.className = "pet-card";
+
   card.innerHTML = `
-    <img src="${pet.image}" alt="${pet.name}">
+    <img src="${pet.image}" alt="${pet.name}" class="pet-img">
     <h3>${pet.name}</h3>
     <p class="price">Rp ${pet.price}</p>
   `;
+
+  // Tambahkan fitur klik gambar → DM Instagram
+  const img = card.querySelector("img");
+  img.style.cursor = "pointer";
+  img.addEventListener("click", () => {
+    window.location.href = instagramDM;
+  });
+
   container.appendChild(card);
 });
