@@ -22,6 +22,9 @@ const pets = [
   { name: "Elephant 1kg+(3)", price: "12.000", image: "images/elephant.png" },
   { name: "M Ostrich 106.36kg", price: "100.000", image: "images/ostrich.png" },
   { name: "Pet Tumbal Age 45,50,75", price: "3.000", image: "images/pet_tumbal.png" },
+  { name: "Mutasi Golden", price: "50.000", image: "images/petmutationmachine.png" },
+  { name: "Mutasi Mega", price: "80.000", image: "images/petmutationmachine.png" },
+  { name: "Mutasi Rainbow", price: "100.000", image: "images/petmutationmachine.png" }.
 ];
 
 const container = document.getElementById("pet-list");
@@ -48,6 +51,7 @@ pets.forEach(pet => {
 
   container.appendChild(card);
 });
+
 
 
 
