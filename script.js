@@ -21,14 +21,14 @@ const pets = [
   { name: "M Butterfly 39.06kg+", price: "35.000", image: "images/butterfly.png" },
   { name: "DragonFly 1kg+", price: "8.000", image: "images/dragonfly.png" },
   { name: "DragonFly 2kg+", price: "10.000", image: "images/dragonfly.png" },
-  { name: "Elephant 1kg+(3)", price: "12.000", image: "images/elephant.png" },
+  { name: "Elephant 1kg+(4)", price: "12.000", image: "images/elephant.png" },
   { name: "Pet Tumbal Age 45,50,75", price: "3.000", image: "images/pet_tumbal.png" },
   { name: "Mutasi Golden", price: "50.000", image: "images/petmutationmachine.png" },
   { name: "Mutasi Mega", price: "80.000", image: "images/petmutationmachine.png" },
   { name: "Mutasi Rainbow", price: "120.000", image: "images/petmutationmachine.png" },
   { name: "Joki Mutasi Nightmare", price: "7.000", image: "images/nightmaremutation.png" },
   { name: "Joki Weight 1x Putaran", price: "10.000", image: "images/weight.png" },
-  { name: "Joki Weight 10x Putaran", price: "80.000", image: "images/weight.png" },
+  { name: "Joki Weight 10x Putaran", price: "85.000", image: "images/weight.png" },
 ];
 
 const container = document.getElementById("pet-list");
@@ -55,6 +55,7 @@ pets.forEach(pet => {
 
   container.appendChild(card);
 });
+
 
 
 
