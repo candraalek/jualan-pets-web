@@ -16,7 +16,7 @@ const pets = [
   { name: "Red Fox base 1kg+(5)", price: "7.000", image: "images/redfox.png" },
   { name: "Red Fox base 2kg+(3)", price: "9.000", image: "images/redfox.png" },
   { name: "Mizuchi", price: "8.000", image: "images/mizuchi.png" },
-  { name: "Headless Horseman base 1kg+(12)", price: "10.000", image: "images/headless_horseman.png" },
+  { name: "Headless Horseman base 1kg+(11)", price: "10.000", image: "images/headless_horseman.png" },
   { name: "Headless Horseman base 2kg+(5)", price: "12.500", image: "images/headless_horseman.png" },
   { name: "Headless Horseman base 2.5kg+(3)", price: "15.000", image: "images/headless_horseman.png" },
   { name: "RB Queen Bee base 2kg+", price: "?", image: "images/queen_bee.png" },
@@ -62,6 +62,7 @@ pets.forEach(pet => {
 
   container.appendChild(card);
 });
+
 
 
 
