@@ -10,8 +10,8 @@ const pets = [
   { name: "NM Mimic Octopus 26.68kg", price: "40.000", image: "images/mimicoctopus.png" },
   { name: "NM Mimic Octopus 26.33kg", price: "40.000", image: "images/mimicoctopus.png" },
   { name: "Mimic Octopus base 2.81kg", price: "20.000", image: "images/mimicoctopus.png" },
-  { name: "Bald Eagle", price: "6.000", image: "" },
-  { name: "", price: "", image: "" },
+  { name: "Bald Eagle", price: "6.000", image: "images/baldeagle.png" },
+  { name: "G Brontosaurus 11.83kg", price: "15.000", image: "images/brontosaurus.png" },
   { name: "Red Fox base 1kg+(5)", price: "7.000", image: "images/redfox.png" },
   { name: "Red Fox base 2kg+(3)", price: "9.000", image: "images/redfox.png" },
   { name: "Headless Horseman base 1kg+(12)", price: "10.000", image: "images/headless_horseman.png" },
@@ -59,6 +59,7 @@ pets.forEach(pet => {
 
   container.appendChild(card);
 });
+
 
 
 
