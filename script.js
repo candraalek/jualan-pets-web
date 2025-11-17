@@ -15,7 +15,7 @@ const pets = [
   { name: "Headless Horseman base 1kg+(12)", price: "10.000", image: "images/headless_horseman.png" },
   { name: "Headless Horseman base 2kg+(5)", price: "15.000", image: "images/headless_horseman.png" },
   { name: "Headless Horseman base 2.5kg+(3)", price: "20.000", image: "images/headless_horseman.png" },
-  { name: "RB Queen Bee base 2kg+", price: "15.000", image: "images/queen_bee.png" },
+  { name: "RB Queen Bee base 2kg+", price: "?", image: "images/queen_bee.png" },
   { name: "M Queen Bee base 38.91kg+", price: "25.000", image: "images/queen_bee.png" },
   { name: "Queen Bee base 2.09kg", price: "10.000", image: "images/queen_bee.png" },
   { name: "M Butterfly 39.06kg+", price: "35.000", image: "images/butterfly.png" },
@@ -25,8 +25,8 @@ const pets = [
   { name: "Pet Tumbal Age 45,50,75", price: "?", image: "images/pet_tumbal.png" },
   { name: "Mutasi Golden", price: "50.000", image: "images/petmutationmachine.png" },
   { name: "Mutasi Mega", price: "80.000", image: "images/petmutationmachine.png" },
-  { name: "Mutasi Rainbow", price: "120.000", image: "images/petmutationmachine.png" },
-  { name: "Joki Mutasi Nightmare", price: "7.000", image: "images/nightmaremutation.png" },
+  { name: "Mutasi Rainbow", price: "110.000", image: "images/petmutationmachine.png" },
+  { name: "Joki Mutasi Nightmare", price: "6.000", image: "images/nightmaremutation.png" },
   { name: "Joki Weight 1x Putaran", price: "10.000", image: "images/weight.png" },
   { name: "Joki Weight 10x Putaran", price: "80.000", image: "images/weight.png" },
   { name: "Joki Level Pet 1-50", price: "10.000", image: "images/joki_level_pets_1-50.png" },
@@ -57,6 +57,7 @@ pets.forEach(pet => {
 
   container.appendChild(card);
 });
+
 
 
 
