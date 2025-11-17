@@ -29,8 +29,8 @@ const pets = [
   { name: "Joki Mutasi Nightmare", price: "7.000", image: "images/nightmaremutation.png" },
   { name: "Joki Weight 1x Putaran", price: "10.000", image: "images/weight.png" },
   { name: "Joki Weight 10x Putaran", price: "85.000", image: "images/weight.png" },
-  { name: "Joki Weight 10x Putaran", price: "85.000", image: "images/joki_level_pets_1-50.png" },
-  { name: "Joki Weight 10x Putaran", price: "85.000", image: "" },
+  { name: "Joki Level Pet 1-50", price: "25.000", image: "images/joki_level_pets_1-50.png" },
+  { name: "Joki Level Pet 50-100", price: "35.000", image: "images/joki_level_pets_50-100.png" },
 ];
 
 const container = document.getElementById("pet-list");
@@ -57,6 +57,7 @@ pets.forEach(pet => {
 
   container.appendChild(card);
 });
+
 
 
 
