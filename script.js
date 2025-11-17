@@ -29,6 +29,8 @@ const pets = [
   { name: "Joki Mutasi Nightmare", price: "7.000", image: "images/nightmaremutation.png" },
   { name: "Joki Weight 1x Putaran", price: "10.000", image: "images/weight.png" },
   { name: "Joki Weight 10x Putaran", price: "85.000", image: "images/weight.png" },
+  { name: "Joki Weight 10x Putaran", price: "85.000", image: "images/weight.png" },
+  { name: "Joki Weight 10x Putaran", price: "85.000", image: "images/weight.png" },
 ];
 
 const container = document.getElementById("pet-list");
@@ -55,6 +57,7 @@ pets.forEach(pet => {
 
   container.appendChild(card);
 });
+
 
 
 
