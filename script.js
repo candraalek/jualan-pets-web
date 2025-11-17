@@ -1,11 +1,11 @@
 const pets = [
   { name: "NM Huge Spider 47.02kg", price: "40.000", image: "images/spider.png" },
-  { name: "NM Spider 86.63kg", price: "100.000", image: "images/spider.png" },
-  { name: "NM Spider 98.50kg", price: "125.000", image: "images/spider.png" },
-  { name: "NM Spider 107.63kg", price: "150.000", image: "images/spider.png" },
+  { name: "NM Spider 86.63kg", price: "80.000", image: "images/spider.png" },
+  { name: "NM Spider 98.50kg", price: "100.000", image: "images/spider.png" },
+  { name: "NM Spider 107.63kg", price: "125.000", image: "images/spider.png" },
   { name: "M Ostrich 106.36kg", price: "100.000", image: "images/ostrich.png" },
   { name: "M GrizzlyBear 107.70kg", price: "100.000", image: "images/grizzlybear.png" },
-  { name: "NM Echo Frog 39.26kg", price: "80.000", image: "images/echo_frog.png" },
+  { name: "NM Echo Frog 39.26kg", price: "50.000", image: "images/echo_frog.png" },
   { name: "NM Mimic Octopus 39,18kg", price: "60.000", image: "images/mimicoctopus.png" },
   { name: "NM Mimic Octopus 26.68kg", price: "40.000", image: "images/mimicoctopus.png" },
   { name: "NM Mimic Octopus 26.33kg", price: "40.000", image: "images/mimicoctopus.png" },
@@ -28,9 +28,9 @@ const pets = [
   { name: "Mutasi Rainbow", price: "120.000", image: "images/petmutationmachine.png" },
   { name: "Joki Mutasi Nightmare", price: "7.000", image: "images/nightmaremutation.png" },
   { name: "Joki Weight 1x Putaran", price: "10.000", image: "images/weight.png" },
-  { name: "Joki Weight 10x Putaran", price: "85.000", image: "images/weight.png" },
-  { name: "Joki Level Pet 1-50", price: "15.000", image: "images/joki_level_pets_1-50.png" },
-  { name: "Joki Level Pet 50-100", price: "25.000", image: "images/joki_level_pets_50-100.png" },
+  { name: "Joki Weight 10x Putaran", price: "80.000", image: "images/weight.png" },
+  { name: "Joki Level Pet 1-50", price: "10.000", image: "images/joki_level_pets_1-50.png" },
+  { name: "Joki Level Pet 50-100", price: "15.000", image: "images/joki_level_pets_50-100.png" },
 ];
 
 const container = document.getElementById("pet-list");
@@ -57,6 +57,7 @@ pets.forEach(pet => {
 
   container.appendChild(card);
 });
+
 
 
 
