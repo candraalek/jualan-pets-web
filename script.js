@@ -4,7 +4,7 @@ const pets = [
   { name: "NM Spider 98.50kg", price: "100.000", image: "images/spider.png" },
   { name: "NM Spider 107.63kg", price: "125.000", image: "images/spider.png" },
   { name: "M Ostrich 106.36kg", price: "100.000", image: "images/ostrich.png" },
-  { name: "NM Capybara 68.68kg", price: "68.000", image: "images/capybara.png" },
+  { name: "NM Capybara 68.68kg", price: "65.000", image: "images/capybara.png" },
   { name: "Godly Bat 10kg+(2)", price: "30.000", image: "images/bat.png" },
   { name: "M GrizzlyBear 107.70kg", price: "100.000", image: "images/grizzlybear.png" },
   { name: "NM Echo Frog 39.26kg cd 15 dtk", price: "50.000", image: "images/echo_frog.png" },
@@ -63,6 +63,7 @@ pets.forEach(pet => {
 
   container.appendChild(card);
 });
+
 
 
 
