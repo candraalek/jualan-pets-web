@@ -1,52 +1,111 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f7f7f7;
-  color: #333;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
+/* HEADER */
 header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 1rem;
+    background: #32a852;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
 }
 
-.pet-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2rem;
-  gap: 1.5rem;
+/* GRID PRODUCT */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 .pet-card {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 1rem;
-  width: 180px;
-  transition: transform 0.2s;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: .2s;
 }
 
 .pet-card:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .pet-card img {
-  width: 100%;
-  border-radius: 10px;
+    width: 140px;
+    margin-bottom: 10px;
 }
 
-.price {
-  color: #4CAF50;
-  font-weight: bold;
-  margin-top: 0.5rem;
+.pet-name {
+    font-weight: bold;
 }
 
-footer {
-  background: #eee;
-  padding: 1rem;
-  margin-top: 2rem;
+.pet-price {
+    color: green;
+}
+
+/* MODAL POPUP */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 380px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    animation: fadeIn .3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.closeBtn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#modalImage {
+    width: 140px;
+    display: block;
+    margin: auto;
+}
+
+.btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.order-box {
+    display:none;
+    margin-top:20px;
+}
+
+#buyAmount {
+    padding: 5px;
+    width: 80px;
 }
