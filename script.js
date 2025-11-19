@@ -1,56 +1,51 @@
-// DATA FUNGSI PET
-const petInfo = {
-    "NM Huge Spider 47.02kg": "Fungsi: Menambah damage dan kecepatan panen.",
-    "NM Spider 86.63kg": "Fungsi: Meningkatkan drop item langka.",
-    "NM Spider 98.50kg": "Fungsi: Menambah kapasitas panen.",
-    // Tambah semua pet kamu di sini
-};
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const modalName = document.getElementById("modal-name");
+const modalFungsi = document.getElementById("modal-fungsi");
+const modalPrice = document.getElementById("modal-price");
+const jumlahInput = document.getElementById("jumlah");
+const closeModal = document.getElementById("close-modal");
 
-// Elemen modal
-const modal = document.getElementById("petModal");
-const modalImg = document.getElementById("modalImage");
-const modalName = document.getElementById("modalName");
-const modalFunction = document.getElementById("modalFunction");
-const orderBtn = document.getElementById("orderBtn");
-const orderOptions = document.getElementById("orderOptions");
-const buyAmount = document.getElementById("buyAmount");
-const confirmOrder = document.getElementById("confirmOrder");
-
-// Tutup modal
-document.querySelector(".closeBtn").onclick = () => {
-    modal.style.display = "none";
-    orderOptions.style.display = "none";
-};
-
-// Klik pet-card
+// Klik card → buka modal
 document.querySelectorAll(".pet-card").forEach(card => {
-    card.addEventListener("click", () => {
-        const name = card.getAttribute("data-name");
-        const img = card.getAttribute("data-images");
+    card.addEventListener("click", function() {
 
-        modalName.textContent = name;
-        modalImg.src = img;
-        modalFunction.textContent = petInfo[name] || "Fungsi belum tersedia.";
+        const imgSrc = this.querySelector(".pet-img").src;
+        const name = this.querySelector(".pet-name").innerText;
+        const price = this.querySelector(".pet-price").innerText;
+        const fungsi = this.querySelector(".pet-fungsi").innerText;
 
-        modal.style.display = "block";
+        modalImg.src = imgSrc;
+        modalName.innerText = name;
+        modalFungsi.innerText = "Fungsi: " + fungsi;
+        modalPrice.innerText = price;
+
+        modal.style.display = "flex";
     });
 });
 
-// Tombol PESAN
-orderBtn.onclick = () => {
-    orderOptions.style.display = "block";
+// Tutup modal
+closeModal.onclick = () => modal.style.display = "none";
+
+window.onclick = (e) => {
+    if (e.target == modal) modal.style.display = "none";
 };
 
-// Konfirmasi PESAN → DM Instagram
-confirmOrder.onclick = () => {
-    const name = modalName.textContent;
-    const amount = buyAmount.value;
+// Tombol PESAN → buka IG
+document.getElementById("btn-pesan").addEventListener("click", () => {
 
-    const message = encodeURIComponent(
-        `Halo kak, saya mau pesan:\n\n${name}\nJumlah: ${amount}\n\nApakah masih ready?`
-    );
+    const name = modalName.innerText;
+    const jumlah = jumlahInput.value;
 
-    // Ganti username IG kamu!
-    window.open(`https://www.instagram.com/direct/t/yourusername/?text=${message}`, "_blank");
-};
+    const message =
+        `Halo kak, saya mau beli ${name} (${jumlah} pcs). Apakah masih ready?`;
 
+    const encodedMessage = encodeURIComponent(message);
+
+    // GANTI USERNAME DI SINI
+    const igUsername = "USERNAME_IG_KAMU";
+
+    const url = `https://instagram.com/${igUsername}?text=${encodedMessage}`;
+
+    window.open(url, "_blank");
+});
