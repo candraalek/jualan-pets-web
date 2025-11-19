@@ -3,7 +3,6 @@ const petInfo = {
     "NM Huge Spider 47.02kg": "Every 3:20 minutes, weaves a 30.42 stud web that lasts for 16.90s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 25.35s every second.",
     "NM Spider 86.63kg": "Every 3:20 minutes, weaves a 36 stud web that lasts for 20s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 30s every second.",
     "NM Spider 98.50kg": "Every 3:20 minutes, weaves a 36 stud web that lasts for 20s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 30s every second.",
-    // Tambah semua pet kamu di sini
 };
 
 // Elemen modal
@@ -27,13 +26,19 @@ document.querySelectorAll(".pet-card").forEach(card => {
     card.addEventListener("click", () => {
         const name = card.getAttribute("data-name");
         const img = card.getAttribute("data-images");
-        const stock = card.getAttribute("data-stock"); // ← CEK STOCK
+        const stock = card.getAttribute("data-stock");
+        const qty = parseInt(card.getAttribute("data-qty")) || 1;  // AMBIL JUMLAH STOK
 
         modalName.textContent = name;
         modalImg.src = img;
         modalFunction.textContent = petInfo[name] || "Fungsi belum tersedia.";
 
-        // Jika SOLD, disable tombol PESAN
+        // === ATUR JUMLAH PEMBELIAN SESUAI STOK ===
+        buyAmount.max = qty;
+        buyAmount.value = 1;
+        buyAmount.disabled = (qty === 1); // disable jika cuma punya 1
+
+        // Jika sold
         if (stock === "sold") {
             orderBtn.disabled = true;
             orderBtn.textContent = "SOLD OUT";
@@ -62,28 +67,14 @@ confirmOrder.onclick = () => {
         `Halo kak, saya mau pesan:\n\n${name}\nJumlah: ${amount}\n\nApakah masih ready?`
     );
 
-    const username = "hansoo.4"; // ← ganti dengan IG kamu
+    const username = "hansoo.4";
 
-    // Deep link untuk HP (langsung masuk DM)
     const appLink = `instagram://user?username=${username}`;
-
-    // Link fallback untuk PC/laptop
     const webLink = `https://www.instagram.com/${username}/?text=${message}`;
 
-    // Coba buka aplikasi IG
     window.location.href = appLink;
 
-    // Jika gagal (misal di PC), buka web
     setTimeout(() => {
         window.open(webLink, "_blank");
     }, 800);
 };
-
-
-
-
-
-
-
-
-
