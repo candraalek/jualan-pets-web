@@ -50,13 +50,14 @@ confirmOrder.onclick = () => {
         `Halo kak, saya mau pesan:\n\n${name}\nJumlah: ${amount}\n\nApakah masih ready?`
     );
 
-    const username = "username_kamu"; // ← Ganti ini
+    const username = "hansoo.4"; // ← Ganti ini
 
     window.open(
         `https://www.instagram.com/${username}/?text=${message}`,
         "_blank"
     );
 };
+
 
 
 
