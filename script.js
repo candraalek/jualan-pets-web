@@ -51,7 +51,8 @@ confirmOrder.onclick = () => {
     );
 
     // Ganti username IG kamu!
-    window.open(`https://www.instagram.com/direct/t/hansoo.4/?text=${message}`, "_blank");
+    window.open(`https://https://www.instagram.com/direct/inbox/?text=${message}`, "_blank");
 };
+
 
 
