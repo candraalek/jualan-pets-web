@@ -1,105 +1,55 @@
-const pets = [
-  { name: "NM Huge Spider 47.02kg", price: "40.000", image: "images/spider.png" },
-  { name: "NM Spider 86.63kg", price: "80.000", image: "images/spider.png" },
-  { name: "NM Spider 98.50kg", price: "100.000", image: "images/spider.png" },
-  { name: "NM Spider 107.63kg", price: "125.000", image: "images/spider.png" },
-  { name: "M Ostrich 106.36kg", price: "100.000", image: "images/ostrich.png" },
-  { name: "NM Capybara 68.68kg", price: "65.000", image: "images/capybara.png" },
-  { name: "Godly Bat 10kg+(2)", price: "30.000", image: "images/bat.png" },
-  { name: "M GrizzlyBear 107.70kg", price: "100.000", image: "images/grizzlybear.png" },
-  { name: "NM Echo Frog 39.26kg cd 15 dtk", price: "50.000", image: "images/echo_frog.png" },
-  { name: "NM Mimic Octopus 39,18kg", price: "60.000", image: "images/mimicoctopus.png" },
-  { name: "NM Mimic Octopus 26.68kg", price: "40.000", image: "images/mimicoctopus.png" },
-  { name: "NM Mimic Octopus 26.33kg", price: "40.000", image: "images/mimicoctopus.png" },
-  { name: "Mimic Octopus base 2.81kg", price: "20.000", image: "images/mimicoctopus.png" },
-  { name: "Bald Eagle (2)", price: "6.000", image: "images/baldeagle.png" },
-  { name: "G Brontosaurus 11.83kg", price: "15.000", image: "images/brontosaurus.png" },
-  { name: "Red Fox base 1kg+(5)", price: "7.000", image: "images/redfox.png" },
-  { name: "Red Fox base 2kg+(3)", price: "9.000", image: "images/redfox.png" },
-  { name: "Mizuchi", price: "8.000", image: "images/mizuchi.png" },
-  { name: "Headless Horseman base 1kg+(11)", price: "10.000", image: "images/headless_horseman.png" },
-  { name: "Headless Horseman base 2kg+(5)", price: "12.500", image: "images/headless_horseman.png" },
-  { name: "Headless Horseman base 2.5kg+(3)", price: "15.000", image: "images/headless_horseman.png" },
-  { name: "RB Queen Bee base 2kg+", price: "?", image: "images/queen_bee.png" },
-  { name: "M Queen Bee base 38.91kg+", price: "25.000", image: "images/queen_bee.png" },
-  { name: "Queen Bee base 2.09kg", price: "10.000", image: "images/queen_bee.png" },
-  { name: "M Butterfly 39.06kg+", price: "35.000", image: "images/butterfly.png" },
-  { name: "Silver Dragonfly", price: "10.000", image: "images/silverdragonfly.png" },
-  { name: "DragonFly 1kg+", price: "?", image: "images/dragonfly.png" },
-  { name: "DragonFly 2kg+", price: "?", image: "images/dragonfly.png" },
-  { name: "Elephant 1kg+(4)", price: "10.000", image: "images/elephant.png" },
-  { name: "Pet Tumbal Age 45,50,75", price: "?", image: "images/pet_tumbal.png" },
-  { name: "Mutasi Golden", price: "50.000", image: "images/petmutationmachine.png" },
-  { name: "Mutasi Mega", price: "80.000", image: "images/petmutationmachine.png" },
-  { name: "Mutasi Rainbow", price: "110.000", image: "images/petmutationmachine.png" },
-  { name: "Joki Mutasi Nightmare", price: "6.000", image: "images/nightmaremutation.png" },
-  { name: "Joki Weight 1x Putaran", price: "10.000", image: "images/weight.png" },
-  { name: "Joki Weight 10x Putaran", price: "80.000", image: "images/weight.png" },
-  { name: "Joki Level Pet 1-50", price: "10.000", image: "images/joki_level_pets_1-50.png" },
-  { name: "Joki Level Pet 50-100", price: "15.000", image: "images/joki_level_pets_50-100.png" },
-];
+// DATA FUNGSI PET
+const petInfo = {
+    "NM Huge Spider 47.02kg": "Fungsi: Menambah damage dan kecepatan panen.",
+    "NM Spider 86.63kg": "Fungsi: Meningkatkan drop item langka.",
+    "NM Spider 98.50kg": "Fungsi: Menambah kapasitas panen.",
+    // Tambah semua pet kamu di sini
+};
 
-const container = document.getElementById("pet-list");
+// Elemen modal
+const modal = document.getElementById("petModal");
+const modalImg = document.getElementById("modalImage");
+const modalName = document.getElementById("modalName");
+const modalFunction = document.getElementById("modalFunction");
+const orderBtn = document.getElementById("orderBtn");
+const orderOptions = document.getElementById("orderOptions");
+const buyAmount = document.getElementById("buyAmount");
+const confirmOrder = document.getElementById("confirmOrder");
 
-// Ganti ke username Instagram kamu
-const instagramDM = "https://ig.me/m/hansoo.4";
+// Tutup modal
+document.querySelector(".closeBtn").onclick = () => {
+    modal.style.display = "none";
+    orderOptions.style.display = "none";
+};
 
-pets.forEach(pet => {
-  const card = document.createElement("div");
-  card.className = "pet-card";
+// Klik pet-card
+document.querySelectorAll(".pet-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const name = card.getAttribute("data-name");
+        const img = card.getAttribute("data-img");
 
-  card.innerHTML = `
-    <img src="${pet.image}" alt="${pet.name}" class="pet-img">
-    <h3>${pet.name}</h3>
-    <p class="price">Rp ${pet.price}</p>
-  `;
+        modalName.textContent = name;
+        modalImg.src = img;
+        modalFunction.textContent = petInfo[name] || "Fungsi belum tersedia.";
 
-  // Tambahkan fitur klik gambar → DM Instagram
-  const img = card.querySelector("img");
-  img.style.cursor = "pointer";
-  img.addEventListener("click", () => {
-    window.location.href = instagramDM;
-  });
-
-  container.appendChild(card);
+        modal.style.display = "block";
+    });
 });
 
+// Tombol PESAN
+orderBtn.onclick = () => {
+    orderOptions.style.display = "block";
+};
 
+// Konfirmasi PESAN → DM Instagram
+confirmOrder.onclick = () => {
+    const name = modalName.textContent;
+    const amount = buyAmount.value;
 
+    const message = encodeURIComponent(
+        `Halo kak, saya mau pesan:\n\n${name}\nJumlah: ${amount}\n\nApakah masih ready?`
+    );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Ganti username IG kamu!
+    window.open(`https://www.instagram.com/direct/t/yourusername/?text=${message}`, "_blank");
+};
