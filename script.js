@@ -27,10 +27,22 @@ document.querySelectorAll(".pet-card").forEach(card => {
     card.addEventListener("click", () => {
         const name = card.getAttribute("data-name");
         const img = card.getAttribute("data-images");
+        const stock = card.getAttribute("data-stock"); // ← CEK STOCK
 
         modalName.textContent = name;
         modalImg.src = img;
         modalFunction.textContent = petInfo[name] || "Fungsi belum tersedia.";
+
+        // Jika SOLD, disable tombol PESAN
+        if (stock === "sold") {
+            orderBtn.disabled = true;
+            orderBtn.textContent = "SOLD OUT";
+            orderBtn.style.background = "#777";
+        } else {
+            orderBtn.disabled = false;
+            orderBtn.textContent = "PESAN";
+            orderBtn.style.background = "#4CAF50";
+        }
 
         modal.style.display = "block";
     });
@@ -66,6 +78,7 @@ confirmOrder.onclick = () => {
         window.open(webLink, "_blank");
     }, 800);
 };
+
 
 
 
