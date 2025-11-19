@@ -1,64 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Jualan Pets Grow a Garden</title>
+
+    <!-- LINK CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="header">
-        <h2>🌿 Daftar Jualan Pets Grow a Garden</h2>
-        <p>(klik gambar untuk melihat fungsi & pesan)</p>
+<header>
+    🌿 Daftar Jualan Pets Grow a Garden  
+    <br><small>(klik gambar untuk melihat fungsi & pesan)</small>
+</header>
+
+<div class="container">
+
+    <!-- Contoh PET -->
+    <div class="pet-card" data-name="NM Huge Spider 47.02kg" data-img="img/spider1.png">
+        <img src="img/spider1.png">
+        <div class="pet-name">NM Huge Spider 47.02kg</div>
+        <div class="pet-price">Rp 40.000</div>
     </div>
 
-    <div class="container">
-
-        <!-- PET 1 -->
-        <div class="pet-card">
-            <img src="images/spider1.png" class="pet-img">
-            <h3 class="pet-name">NM Huge Spider 47.02kg</h3>
-            <p class="pet-price">Rp 40.000</p>
-            <p class="pet-fungsi" hidden>Menambah damage dan kecepatan panen.</p>
-        </div>
-
-        <!-- PET 2 -->
-        <div class="pet-card">
-            <img src="images/spider2.png" class="pet-img">
-            <h3 class="pet-name">NM Spider 86.63kg</h3>
-            <p class="pet-price">Rp 80.000</p>
-            <p class="pet-fungsi" hidden>Damage + Speed panen naik.</p>
-        </div>
-
-        <!-- PET 3 -->
-        <div class="pet-card">
-            <img src="images/spider3.png" class="pet-img">
-            <h3 class="pet-name">NM Spider 98.50kg</h3>
-            <p class="pet-price">Rp 100.000</p>
-            <p class="pet-fungsi" hidden>Boost besar untuk farming.</p>
-        </div>
-
+    <div class="pet-card" data-name="NM Spider 86.63kg" data-img="img/spider2.png">
+        <img src="img/spider2.png">
+        <div class="pet-name">NM Spider 86.63kg</div>
+        <div class="pet-price">Rp 80.000</div>
     </div>
 
-    <!-- MODAL -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span id="close-modal" class="close">&times;</span>
-
-            <img id="modal-img" class="modal-img">
-            <h2 id="modal-name"></h2>
-            <p id="modal-fungsi"></p>
-            <p id="modal-price" class="modal-price"></p>
-
-            <label for="jumlah">Jumlah yang dibeli:</label>
-            <input type="number" id="jumlah" value="1" min="1">
-
-            <button id="btn-pesan" class="pesan-btn">Pesan</button>
-        </div>
+    <div class="pet-card" data-name="NM Spider 98.50kg" data-img="img/spider3.png">
+        <img src="img/spider3.png">
+        <div class="pet-name">NM Spider 98.50kg</div>
+        <div class="pet-price">Rp 100.000</div>
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<!-- MODAL -->
+<div id="petModal" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+
+        <img id="modalImage">
+        <h2 id="modalName"></h2>
+        <p id="modalFunction"></p>
+
+        <button id="orderBtn" class="btn">Pesan</button>
+
+        <div id="orderOptions" class="order-box">
+            <label>Pilih jumlah:</label><br>
+            <input type="number" id="buyAmount" min="1" value="1">
+            <br><br>
+            <button id="confirmOrder" class="btn confirm">Konfirmasi Pesanan</button>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
 
 </body>
 </html>
