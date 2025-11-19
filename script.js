@@ -26,7 +26,7 @@ document.querySelector(".closeBtn").onclick = () => {
 document.querySelectorAll(".pet-card").forEach(card => {
     card.addEventListener("click", () => {
         const name = card.getAttribute("data-name");
-        const img = card.getAttribute("data-img");
+        const img = card.getAttribute("data-images");
 
         modalName.textContent = name;
         modalImg.src = img;
@@ -53,3 +53,4 @@ confirmOrder.onclick = () => {
     // Ganti username IG kamu!
     window.open(`https://www.instagram.com/direct/t/yourusername/?text=${message}`, "_blank");
 };
+
