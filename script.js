@@ -1,8 +1,9 @@
 // DATA FUNGSI PET
 const petInfo = {
-    "NM Huge Spider 47.02kg": "Every 3:20 minutes, weaves a 30.42 stud web that lasts for 16.90s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 25.35s every second.",
+    "NM Spider 47.02kg": "Every 3:20 minutes, weaves a 30.42 stud web that lasts for 16.90s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 25.35s every second.",
     "NM Spider 86.63kg": "Every 3:20 minutes, weaves a 36 stud web that lasts for 20s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 30s every second.",
     "NM Spider 98.50kg": "Every 3:20 minutes, weaves a 36 stud web that lasts for 20s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 30s every second.",
+    "NM Spider 107.63kg": "Every 3:20 minutes, weaves a 36 stud web that lasts for 20s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 30s every second.",
 };
 
 // Elemen modal
@@ -78,3 +79,4 @@ confirmOrder.onclick = () => {
         window.open(webLink, "_blank");
     }, 800);
 };
+
