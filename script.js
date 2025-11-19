@@ -50,13 +50,23 @@ confirmOrder.onclick = () => {
         `Halo kak, saya mau pesan:\n\n${name}\nJumlah: ${amount}\n\nApakah masih ready?`
     );
 
-    const username = "hansoo.4"; // ← Ganti ini
+    const username = "hansoo.4"; // ← ganti dengan IG kamu
 
-    window.open(
-        `https://www.instagram.com/${username}/?text=${message}`,
-        "_blank"
-    );
+    // Deep link untuk HP (langsung masuk DM)
+    const appLink = `instagram://user?username=${username}`;
+
+    // Link fallback untuk PC/laptop
+    const webLink = `https://www.instagram.com/${username}/?text=${message}`;
+
+    // Coba buka aplikasi IG
+    window.location.href = appLink;
+
+    // Jika gagal (misal di PC), buka web
+    setTimeout(() => {
+        window.open(webLink, "_blank");
+    }, 800);
 };
+
 
 
 
