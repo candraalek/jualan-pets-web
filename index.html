@@ -1,106 +1,44 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Jualan Pets Grow a Garden</title>
-
-    <!-- LINK CSS -->
+    <title>Jualan Pets</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    🌿 Daftar Jualan Pets Grow a Garden  
-    <br><small>(klik gambar untuk melihat fungsi & pesan)</small>
-</header>
+    <!-- PET 1 -->
+    <div class="card" data-stock="11">
+        <h2>Kitten Lucu</h2>
 
-<div class="container">
+        <label>Jumlah:</label>
+        <input type="number" class="jumlah" min="1" value="1">
 
-    <!-- PET READY (punya 1 stok) -->
-    <div class="pet-card" 
-        data-name="NM Huge Spider 47.02kg" 
-        data-images="images/spider.png"
-        data-stock="ready"
-        data-qty="1">
-        <img src="images/spider.png">
-        <div class="pet-name">NM Huge Spider 47.02kg</div>
-        <div class="pet-price">Rp 47.000</div>
+        <p>Stok tersedia: <b>11</b></p>
     </div>
 
-    <!-- PET READY (punya contoh 3 stok, ubah sesuai punyamu) -->
-    <div class="pet-card" 
-        data-name="NM Spider 86.63kg" 
-        data-images="images/spider.png"
-        data-stock="ready"
-        data-qty="1">
-        <img src="images/spider.png">
-        <div class="pet-name">NM Spider 86.63kg</div>
-        <div class="pet-price">Rp 86.000</div>
+    <!-- PET 2 -->
+    <div class="card" data-stock="5">
+        <h2>Puppy Golden</h2>
+
+        <label>Jumlah:</label>
+        <input type="number" class="jumlah" min="1" value="1">
+
+        <p>Stok tersedia: <b>5</b></p>
     </div>
 
-    <!-- PET sold -->
-    <div class="pet-card" 
-        data-name="NM Spider 98.50kg" 
-        data-images="images/spider.png"
-        data-stock="ready"
-        data-qty="1">
-        <img src="images/spider.png">
-        <div class="pet-name">NM Spider 98.50kg</div>
-        <div class="pet-price">Rp 98.000</div>
+    <!-- PET 3 -->
+    <div class="card" data-stock="20">
+        <h2>Kelinci Mini</h2>
+
+        <label>Jumlah:</label>
+        <input type="number" class="jumlah" min="1" value="1">
+
+        <p>Stok tersedia: <b>20</b></p>
     </div>
 
-    <div class="pet-card" 
-        data-name="NM Spider 107.63kg" 
-        data-images="images/spider.png"
-        data-stock="ready"
-        data-qty="1">
-        <img src="images/spider.png">
-        <div class="pet-name">NM Spider 107.63kg</div>
-        <div class="pet-price">Rp 100.000</div>
-    </div>
-
-    <div class="pet-card" 
-        data-name="Headless Horseman random base 1kg+" 
-        data-images="images/headless_horseman.png"
-        data-stock="ready"
-        data-qty="11">
-        <img src="images/headless_horseman.png">
-        <div class="pet-name">Headless Horseman random base 1kg+</div>
-        <div class="pet-price">Rp 10.000</div>
-    </div>
-
-</div>
-
-<!-- MODAL -->
-<div id="petModal" class="modal">
-    <div class="modal-content">
-        <span class="closeBtn">&times;</span>
-
-        <img id="modalImage">
-        <h2 id="modalName"></h2>
-        <p id="modalFunction"></p>
-
-        <button id="orderBtn" class="btn">Pesan</button>
-
-        <div id="orderOptions" class="order-box">
-            <label>Pilih jumlah:</label><br>
-            <input type="number" id="buyAmount" min="1" value="1">
-            <br><br>
-            <button id="confirmOrder" class="btn confirm">Konfirmasi Pesanan</button>
-        </div>
-    </div>
-</div>
-
-<!-- SCRIPT -->
-<script src="script.js"></script>
-
+    <!-- PANGGIL FILE JS -->
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
