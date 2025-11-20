@@ -2,27 +2,110 @@ body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
     margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    background: #32a852;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* GRID PRODUCT */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
-.card {
+.pet-card {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: .2s;
 }
 
-label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 5px;
+.pet-card:hover {
+    transform: scale(1.05);
 }
 
-input[type="number"] {
-    padding: 8px;
+.pet-card img {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+.pet-name {
+    font-weight: bold;
+}
+
+.pet-price {
+    color: green;
+}
+
+/* MODAL POPUP */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
     width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 380px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    animation: fadeIn .3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.closeBtn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#modalImage {
+    width: 140px;
+    display: block;
+    margin: auto;
+}
+
+.btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.order-box {
+    display:none;
+    margin-top:20px;
+}
+
+#buyAmount {
+    padding: 5px;
+    width: 80px;
 }
