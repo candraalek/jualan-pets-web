@@ -1,44 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jualan Pets</title>
+    <title>Daftar Jualan Pets Grow a Garden</title>
+
+    <!-- LINK CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- PET 1 -->
-    <div class="card" data-stock="11">
-        <h2>Kitten Lucu</h2>
+<header>
+    🌿 Daftar Jualan Pets Grow a Garden  
+    <br><small>(klik gambar untuk melihat fungsi & pesan)</small>
+</header>
 
-        <label>Jumlah:</label>
-        <input type="number" class="jumlah" min="1" value="1">
+<div class="container">
 
-        <p>Stok tersedia: <b>11</b></p>
+    <!-- PET READY -->
+    <div class="pet-card" 
+        data-name="NM Huge Spider 47.02kg" 
+        data-images="images/spider.png"
+        data-stock="ready">
+        <img src="images/spider.png">
+        <div class="pet-name">NM Huge Spider 47.02kg</div>
+        <div class="pet-price">Rp 40.000</div>
     </div>
 
-    <!-- PET 2 -->
-    <div class="card" data-stock="5">
-        <h2>Puppy Golden</h2>
-
-        <label>Jumlah:</label>
-        <input type="number" class="jumlah" min="1" value="1">
-
-        <p>Stok tersedia: <b>5</b></p>
+    <!-- PET READY -->
+    <div class="pet-card" 
+        data-name="NM Spider 86.63kg" 
+        data-images="images/spider.png"
+        data-stock="ready">
+        <img src="images/spider.png">
+        <div class="pet-name">NM Spider 86.63kg</div>
+        <div class="pet-price">Rp 80.000</div>
     </div>
 
-    <!-- PET 3 -->
-    <div class="card" data-stock="20">
-        <h2>Kelinci Mini</h2>
+    <!-- PET SOLD -->
+    <div class="pet-card sold" 
+        data-name="NM Spider 98.50kg" 
+        data-images="images/spider.png"
+        data-stock="sold"> 
+        <img src="images/spider.png">
+        <div class="pet-name">NM Spider 98.50kg</div>
+        <div class="pet-price">SOLD</div>
 
-        <label>Jumlah:</label>
-        <input type="number" class="jumlah" min="1" value="1">
+</div>
 
-        <p>Stok tersedia: <b>20</b></p>
+<!-- MODAL -->
+<div id="petModal" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+
+        <img id="modalImage">
+        <h2 id="modalName"></h2>
+        <p id="modalFunction"></p>
+
+        <button id="orderBtn" class="btn">Pesan</button>
+
+        <div id="orderOptions" class="order-box">
+            <label>Stock tersedia:</label><br>
+            <input type="number" id="buyAmount" min="1" value="1">
+            <br><br>
+            <button id="confirmOrder" class="btn confirm">Konfirmasi Pesanan</button>
+        </div>
     </div>
+</div>
 
-    <!-- PANGGIL FILE JS -->
-    <script src="script.js"></script>
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
 </body>
 </html>
