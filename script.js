@@ -4,7 +4,7 @@ const petInfo = {
     "NM Spider 86.63kg": "Every 3:20 minutes, weaves a 36 stud web that lasts for 20s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 30s every second.",
     "NM Spider 98.50kg": "Every 3:20 minutes, weaves a 36 stud web that lasts for 20s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 30s every second.",
     "NM Spider 107.63kg": "Every 3:20 minutes, weaves a 36 stud web that lasts for 20s. Pets on the web advance cooldown on extra 1.50s every second & plants grow an additional 30s every second.",
-    "Headless Horseman":"Every 20-40m, haunts a random level 25-50 pet without a mutation, resetting it to level 1 and bestowing one of four chaotic mutations:Dreadbound, Soulflame, or Spectral - with a rare 6-12% chance for Nightmare",
+    "Headless Horseman random base 1kg+":"Every 20-40m, haunts a random level 25-50 pet without a mutation, resetting it to level 1 and bestowing one of four chaotic mutations:Dreadbound, Soulflame, or Spectral - with a rare 6-12% chance for Nightmare",
 };
 
 // Elemen modal
@@ -80,5 +80,6 @@ confirmOrder.onclick = () => {
         window.open(webLink, "_blank");
     }, 800);
 };
+
 
 
