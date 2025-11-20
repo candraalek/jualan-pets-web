@@ -1,5 +1,5 @@
 // GANTI DENGAN LINK IG ANDA
-const instagramURL = "https://instagram.com/USERNAME_ANDA";
+const instagramURL = "https://instagram.com/hansoo.4";
 
 // modal elements
 const modal = document.getElementById("petModal");
@@ -56,3 +56,4 @@ confirmOrder.onclick = () => {
         window.location.href = instagramURL;
     }
 };
+
