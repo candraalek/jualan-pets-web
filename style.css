@@ -105,7 +105,8 @@ header {
     margin-top:20px;
 }
 
-#buyAmount {
-    padding: 5px;
-    width: 80px;
+/* 🌟 Tombol Pesan ditaruh di tengah */
+#orderBtn {
+    display: block;
+    margin: 20px auto 0 auto;
 }
