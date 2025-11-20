@@ -22,8 +22,9 @@ document.querySelectorAll(".pet-card").forEach(card => {
         const stock = card.dataset.stock;
         modalFunction.innerHTML = "Stock: <b>" + stock + "</b>";
 
-        // Tampilkan tombol setelah klik "Pesan"
-        orderOptions.style.display = "none";
+        // RESET setiap buka modal
+        orderBtn.style.display = "block";   // tampilkan tombol pesan
+        orderOptions.style.display = "none"; // sembunyikan konfirmasi terlebih dulu
 
         // Atur tombol konfirmasi
         if (stock === "sold") {
@@ -43,9 +44,10 @@ document.querySelector(".closeBtn").onclick = () => {
     modal.style.display = "none";
 };
 
-// Tampilkan tombol konfirmasi setelah klik Pesan
+// Setelah klik tombol Pesan
 orderBtn.onclick = () => {
-    orderOptions.style.display = "block";
+    orderBtn.style.display = "none";   // tombol PESAN hilang
+    orderOptions.style.display = "block"; // muncul tombol KONFIRMASI
 };
 
 // Jika ready → klik konfirmasi menuju IG
